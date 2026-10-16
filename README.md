@@ -16,7 +16,7 @@ A Claude tool-use agent (Anthropic TypeScript SDK, `claude-opus-5-5`) opens a sm
 | Checkpoint / resume | written after every turn | a stopped or crashed run continues from the file, no page fetched twice |
 | Cost log | every model call | one JSON line: tokens in/out, call cost, running total |
 
-**"How do you stop an agent from getting stuck in a loop and wasting API costs?"** Count identical tool calls with a canonical key, answer the first repeat with a cheap error instead of running the tool again (most models change course here), stop hard at a small threshold, and check the turn and dollar ceilings *before* each request rather than after. Then checkpoint so a stop costs nothing to resume.
+**"How do you stop an agent from getting stuck in a loop and wasting API costs?"** Count identical tool calls with a canonical key, answer the first repeat with a cheap error instead of running the tool again (a chance to change course), stop hard at a small threshold, and check the turn and dollar ceilings *before* each request rather than after. Then checkpoint so a stop costs nothing to resume.
 
 ## Architecture
 
