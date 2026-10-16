@@ -2,7 +2,7 @@
 
 [![ci](https://github.com/mcknx/claude-agent-loop-guard/actions/workflows/ci.yml/badge.svg)](https://github.com/mcknx/claude-agent-loop-guard/actions/workflows/ci.yml)
 
-> **Demo project, not client work.** Built to show how I put guard rails on a Claude agent. The shop it browses is a fictional local fixture. No `ANTHROPIC_API_KEY` was used to produce the output below: the loop ran against a **scripted fake model client**, and the browser part is real Playwright.
+> **Demo project, not client work.** Guard rails around a Claude tool-use agent loop. The shop it browses is a fictional local fixture. No `ANTHROPIC_API_KEY` was used to produce the output below: the loop ran against a **scripted fake model client**, and the browser part is real Playwright.
 
 ## What it does (30 seconds)
 
@@ -95,7 +95,7 @@ Best value: Ridge 35 (4.6 rating at $89).
 
 ## Choices and limits
 
-- **Manual loop on the Anthropic SDK, not the Claude Agent SDK.** The Agent SDK is the Claude Code harness with built-in file/bash tools; for a custom-tool agent where I want to own every guard, the plain Messages API loop is smaller and easier to test.
+- **Manual loop on the Anthropic SDK, not the Claude Agent SDK.** The Agent SDK is the Claude Code harness with built-in file/bash tools; for a custom-tool agent that owns every guard, the plain Messages API loop is smaller and easier to test.
 - Prices are hard-coded for `claude-opus-5-5` ($4 / $20 per 1M tokens). Change `PRICE` in `src/agent.ts` for another model.
 - The budget is checked between calls, so one call can overshoot it. A per-call ceiling would need `max_tokens` sized from the remaining budget.
 - Token counts in the fake model are fixed numbers, not real usage.
