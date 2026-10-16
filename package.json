@@ -1,0 +1,30 @@
+{
+  "name": "claude-agent-loop-guard",
+  "version": "1.0.0",
+  "description": "Claude tool-use agent (Anthropic TS SDK + Playwright) with loop, turn and USD-budget guards, checkpoint/resume and a per-run cost log.",
+  "scripts": {
+    "start": "tsx src/cli.ts",
+    "test": "node --import tsx --test --test-reporter=spec test/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "claude",
+    "anthropic",
+    "agent",
+    "playwright",
+    "tool-use"
+  ],
+  "author": "McKeen Asma",
+  "license": "MIT",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.135.0",
+    "playwright": "^1.60.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "type": "module",
+  "private": true
+}
