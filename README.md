@@ -2,6 +2,12 @@
 
 [![ci](https://github.com/mcknx/claude-agent-loop-guard/actions/workflows/ci.yml/badge.svg)](https://github.com/mcknx/claude-agent-loop-guard/actions/workflows/ci.yml)
 
+## Watch the 60-second demo
+
+[![Demo video: claude-agent-loop-guard](docs/demo.gif)](docs/demo.mp4)
+
+[Watch the full demo (MP4, 59 s)](docs/demo.mp4): the README, the architecture diagram, the turn/USD guards and the repeat breaker in `src/agent.ts`, the 6 tests passing and an `npm start` run. No audio; captions on screen.
+
 > **Demo project, not client work.** Guard rails around a Claude tool-use agent loop. The shop it browses is a fictional local fixture. No `ANTHROPIC_API_KEY` was used to produce the output below: the loop ran against a **scripted fake model client**, and the browser part is real Playwright.
 
 ## What it does (30 seconds)
