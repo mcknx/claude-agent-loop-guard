@@ -1,5 +1,7 @@
 # claude-agent-loop-guard
 
+[![ci](https://github.com/mcknx/claude-agent-loop-guard/actions/workflows/ci.yml/badge.svg)](https://github.com/mcknx/claude-agent-loop-guard/actions/workflows/ci.yml)
+
 > **Demo project, not client work.** Built to show how I put guard rails on a Claude agent. The shop it browses is a fictional local fixture. No `ANTHROPIC_API_KEY` was used to produce the output below: the loop ran against a **scripted fake model client**, and the browser part is real Playwright.
 
 ## What it does (30 seconds)
